@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -1083,7 +1083,7 @@
       <div class="particles" id="particles"></div>
       <div class="hero-content" data-aos="fade-up">
         <div class="hero-badge">✨ EXCLUSIVE NEW YEAR'S EVE 2026</div>
-        <h1 class="hero-title">The Night That Defines Your Year</h1>
+        <h1 class="hero-title">The Night Defines Your Year</h1>
         <p class="hero-subtitle">
           Join 500+ young professionals for an unforgettable celebration across
           three premium venues
@@ -1239,7 +1239,14 @@
                 src=""
                 title="NYE 2025 Highlights"
                 frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
                 allowfullscreen
                 style="
                   position: absolute;
@@ -1797,13 +1804,13 @@
 
         // Initialize modals
         const successModal = new bootstrap.Modal(
-          document.getElementById("successModal")
+          document.getElementById("successModal"),
         );
         const errorModal = new bootstrap.Modal(
-          document.getElementById("errorModal")
+          document.getElementById("errorModal"),
         );
         const cancelModal = new bootstrap.Modal(
-          document.getElementById("cancelModal")
+          document.getElementById("cancelModal"),
         );
 
         // Urgent timer (48 hours countdown)
@@ -1817,9 +1824,8 @@
           const hours = Math.floor(diff / (1000 * 60 * 60));
           const minutes = Math.floor((diff / (1000 * 60)) % 60);
 
-          document.getElementById(
-            "urgentTimer"
-          ).textContent = `${hours}h ${minutes}m`;
+          document.getElementById("urgentTimer").textContent =
+            `${hours}h ${minutes}m`;
         }
 
         setInterval(updateUrgentTimer, 60000);
@@ -1860,7 +1866,7 @@
 
           // Update spots remaining
           const currentSpots = parseInt(
-            document.getElementById("spotsLeft").textContent
+            document.getElementById("spotsLeft").textContent,
           );
           if (currentSpots > 50) {
             const newSpots = currentSpots - (Math.random() > 0.5 ? 1 : 2);
@@ -1909,17 +1915,17 @@
 
           document.getElementById("days").textContent = String(days).padStart(
             2,
-            "0"
+            "0",
           );
           document.getElementById("hours").textContent = String(hours).padStart(
             2,
-            "0"
+            "0",
           );
           document.getElementById("minutes").textContent = String(
-            minutes
+            minutes,
           ).padStart(2, "0");
           document.getElementById("seconds").textContent = String(
-            seconds
+            seconds,
           ).padStart(2, "0");
         }
 
@@ -1972,7 +1978,7 @@
               image: "https://via.placeholder.com/150",
               handler: function (response) {
                 const ticketNumber = Math.floor(
-                  100000 + Math.random() * 900000
+                  100000 + Math.random() * 900000,
                 ).toString();
 
                 // Send confirmation email
@@ -2037,7 +2043,7 @@
             exitIntentShown = true;
             if (
               confirm(
-                "WAIT! Get ₹500 OFF if you book in the next 10 minutes! 🎉\n\nClick OK to claim your discount now!"
+                "WAIT! Get ₹500 OFF if you book in the next 10 minutes! 🎉\n\nClick OK to claim your discount now!",
               )
             ) {
               document
